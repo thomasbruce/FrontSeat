@@ -3,47 +3,56 @@
 	<fontset id="default" unicode="true">
 		<font>
 			<name>title1</name>
-			<filename>MyriadPro-Regular.ttf</filename>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 			<size>30</size>
 		</font>
 		<font>
 			<name>HomeMenuItem</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 			<size>48</size>
 		</font>
 		<font>
 			<name>homeheader</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 			<size>42</size>
 		</font>
 		<font>
 			<name>plex</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
 			<size>80</size>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 		</font>
 		<font>
 			<name>HomeMenuItemNoFocus</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
 			<size>40</size>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 		</font>
 		<font>
 			<name>info1</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
 			<size>24</size>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 		</font>
 		<font>
 			<name>list2</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
 			<size>25</size>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 		</font>
 		<font>
 			<name>list1</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 			<size>30</size>
 		</font>
 		<font>
 			<name>settings</name>
-			<filename>MyriadPro-Semibold.ttf</filename>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
 			<size>20</size>
 		</font>
 		<font>
@@ -63,12 +72,14 @@
 		</font>
 		<font>
 			<name>info2</name>
-			<filename>MyriadPro-Regular.ttf</filename>
+			<filename>Helvetica</filename>
+			<variant>Regular</variant>
 			<size>19</size>
 		</font>
 		<font>
 			<name>info3</name>
-			<filename>MyriadPro-Regular.ttf</filename>
+			<filename>Helvetica</filename>
+			<variant>Regular</variant>
 			<size>14</size>
 		</font>
 		<font>
