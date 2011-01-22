@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">16</defaultcontrol>
 	<controls>
 		<control type="group">
+			<visible>!Window.IsActive(2901)</visible>
 			<posx>0</posx>
 			<posy>561</posy>
 			<width>1280</width>

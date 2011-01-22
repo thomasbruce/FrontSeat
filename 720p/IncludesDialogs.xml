@@ -113,7 +113,7 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogListButton">
-		<textcolor>WhiteTrans</textcolor>
+		<textcolor>White</textcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>White</focusedcolor>
 		<font>info1</font>
@@ -121,8 +121,8 @@
 		<aligny>center</aligny>
 		<height>40</height>
 		<pulseonselect>false</pulseonselect>
-		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
-		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
+		<texturefocus border="3">button_media.png</texturefocus>
+		<texturenofocus border="3">-</texturenofocus>
 	</include>
 	<include name="dialogListLabel">
 		<textcolor>WhiteTrans</textcolor>
@@ -158,16 +158,16 @@
 		<radiowidth>48</radiowidth>
 	</include>
 	<include name="dialogSpin">
-		<textcolor>WhiteTrans</textcolor>
+		<textcolor>White</textcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>White</focusedcolor>
 		<font>info1</font>
 		<textoffsetx>15</textoffsetx>
 		<textoffsety>-3</textoffsety>
 		<aligny>center</aligny>
-		<height>40</height>
-		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
-		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
+		<height>70</height>
+		<texturefocus border="3">button_media.png</texturefocus>
+		<texturenofocus border="3">-</texturenofocus>
 		<reverse>yes</reverse>
 	</include>
 	<include name="dialogSlider">

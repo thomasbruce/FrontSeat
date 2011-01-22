@@ -365,6 +365,131 @@
 			<textcolor>White</textcolor>
 		</control>
 	</include>
+	<include name="HeaderVideo">
+		<control type="label">
+			<description>First title</description>
+			<label>Videos</label>
+			<posx>700</posx>
+			<posy>44</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<visible>IsEmpty(Container.SecondTitle) + IsEmpty(Container.FirstTitle) </visible>
+		</control>
+	</include>
+	<include name="HeaderSettings">
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Settings</label>
+			<visible>Window.IsActive(settings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Appearance Settings</label>
+			<visible>Window.IsActive(appearancesettings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Video Settings</label>
+			<visible>Window.IsActive(videossettings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Program Settings</label>
+			<visible>Window.IsActive(programssettings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Music Settings</label>
+			<visible>Window.IsActive(musicsettings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Picture Settings</label>
+			<visible>Window.IsActive(picturessettings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Network Settings</label>
+			<visible>Window.IsActive(networksettings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>Weather Settings</label>
+			<visible>Window.IsActive(weathersettings)</visible>
+		</control>
+		<control type="label">
+			<posx>44</posx>
+			<posy>35</posy>
+			<width>500</width>
+			<height>56</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>homeheader</font>
+			<textcolor>White</textcolor>
+			<label>System Settings</label>
+			<visible>Window.IsActive(systemsettings)</visible>
+		</control>
+	</include>
 	<include name="HeaderHome">
 		<control type="label">
 			<description>First title</description>

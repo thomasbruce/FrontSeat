@@ -339,15 +339,17 @@
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 					</control>
 				</control>
-				<control type="image">
-					<posy>0</posy>
-					<posx>0</posx>
-					<width>510</width>
-					<height>1</height>
-					<texture>white.png</texture>
-					<aspectratio>scale</aspectratio>
-					<colordiffuse>WhiteTrans</colordiffuse>
-				</control>
+<?xml version="1.0"?>
+<control type="image">
+	<posy>0</posy>
+	<posx>0</posx>
+	<width>510</width>
+	<height>1</height>
+	<texture>white.png</texture>
+	<aspectratio>scale</aspectratio>
+	<colordiffuse>WhiteTrans</colordiffuse>
+</control>
+
 				<control type="textbox">
 					<description>Plot/Details</description>
 					<width>510</width>
@@ -445,13 +447,83 @@
 					<colordiffuse>WhiteTrans</colordiffuse>
 				</control>
 			</control>
+			<control type="grouplist">
+				<animation effect="fade" start="0" end="100" delay="280" time="100">Visible</animation>
+				<animation effect="fade" start="100" end="0" delay="0" time="100">Hidden</animation>
+				<visible>System.IdleTime(3) + !Container.Content(movies) + !Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !IsEmpty(ListItem.Plot)</visible>
+				<posx>90</posx>
+				<posy>340</posy>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<usecontrolcoords>false</usecontrolcoords>
+				<control type="group">
+					<height>31</height>
+					<control type="label">
+						<width>400</width>
+						<height>26</height>
+						<font>info1</font>
+						<align>left</align>
+						<aligny>top</aligny>
+						<textcolor>White</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posy>0</posy>
+						<posx>480</posx>
+						<visible>!IsEmpty(ListItem.Rating) + Skin.HasSetting(AlternateRating)</visible>
+						<width>80</width>
+						<height>30</height>
+						<font>info2</font>
+						<align>right</align>
+						<textcolor>White</textcolor>
+						<label>$INFO[ListItem.Rating]</label>
+					</control>
+					<control type="image">
+						<posy>0</posy>
+						<posx>410</posx>
+						<visible>!IsEmpty(ListItem.Rating) + !Skin.HasSetting(AlternateRating)</visible>
+						<width>88</width>
+						<height>31</height>
+						<info>ListItem.StarRating</info>
+						<aspectratio aligny="center" align="left">keep</aspectratio>
+					</control>
+				</control>
+				<control type="image">
+					<posy>0</posy>
+					<posx>0</posx>
+					<width>510</width>
+					<height>1</height>
+					<texture>white.png</texture>
+					<aspectratio>scale</aspectratio>
+					<colordiffuse>WhiteTrans</colordiffuse>
+				</control>
+				<control type="label">
+					<width>400</width>
+					<height>26</height>
+					<font>info2</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>WhiteTrans</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>!IsEmpty(ListItem.Label2)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot/Details</description>
+					<width>510</width>
+					<height>263</height>
+					<info>ListItem.Plot</info>
+					<textcolor>White</textcolor>
+					<font>info2</font>
+					<autoscroll delay="8000" time="2000" repeat="10000">true</autoscroll>
+				</control>
+			</control>
 			<!-- ### POSTER/FANART/THUMBNAIL ### -->
 			<control type="group">
 				<animation type="WindowOpen">
 					<effect type="rotatey" start="0" end="-10" center="0,0" time="300"/>
 					<effect type="zoom" start="100" end="120" center="0,0" time="300"/>
 				</animation>
-				<animation type="Conditional" condition="System.IdleTime(3) + [Container.Content(Movies) | Container.Content(episodes) | Container.Content(tvshows)]">
+				<animation type="Conditional" condition="System.IdleTime(3) + [[Container.Content(Movies) | Container.Content(episodes) | Container.Content(tvshows)] |[!Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !IsEmpty(ListItem.Plot)]]">
 					<effect type="rotatey" start="0" end="12" center="0,0" time="300"/>
 					<effect type="zoom" start="100" end="50" center="280,0" time="300"/>
 				</animation>
@@ -500,10 +572,10 @@
 						<texture flipy="true" diffuse="DiffuseMirror.png"/>
 						<aspectratio aligny="top">keep</aspectratio>
 						<info>ListItem.Thumb</info>
-						<animation effect="fade" start="100" end="0" time="200" condition="System.IdleTime(3) + [Container.Content(movies) | Container.Content(episodes)]">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="200" condition="System.IdleTime(3) + [[Container.Content(Movies) | Container.Content(episodes) | Container.Content(tvshows)] |[!Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !IsEmpty(ListItem.Plot)]]">Conditional</animation>
 					</control>
 					<control type="image">
-						<visible>System.IdleTime(3) + [Container.Content(movies) | Container.Content(episodes)]</visible>
+						<visible>System.IdleTime(3) + [[Container.Content(Movies) | Container.Content(episodes) | Container.Content(tvshows)] |[!Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(artists) + !IsEmpty(ListItem.Plot)]]</visible>
 						<animation effect="fade" end="100" start="0" time="600" delay="0" reversible="false">VisibleChange</animation>
 						<posx>0</posx>
 						<posy>434</posy>

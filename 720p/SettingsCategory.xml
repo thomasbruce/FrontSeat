@@ -4,7 +4,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Background</include>
-		<include>Header</include>
+		<include>HeaderSettings</include>
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
 			<posx>30</posx>
@@ -22,7 +22,7 @@
 			<description>Control Area</description>
 			<posx>370</posx>
 			<posy>100</posy>
-			<width>600</width>
+			<width>800</width>
 			<height>480</height>
 			<itemgap>-20</itemgap>
 			<onleft>3</onleft>
@@ -32,43 +32,11 @@
 			<orientation>vertical</orientation>
 		</control>
 		<control type="button" id="7">
-			<description>Default Button</description>
-			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
-			<texturenofocus border="0">-</texturenofocus>
-			<texturefocus border="10" aligny="center" align="center">button_media.png</texturefocus>
-			<height>86</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<textoffsetx>40</textoffsetx>
-			<width>600</width>
-			<pulseonselect>false</pulseonselect>
 		</control>
 		<control type="radiobutton" id="8">
-			<description>Default Radio Button</description>
-			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
-			<texturenofocus border="0">-</texturenofocus>
-			<texturefocus border="10" aligny="center" align="center">button_media.png</texturefocus>
-			<height>86</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<textoffsetx>40</textoffsetx>
-			<width>600</width>
-			<pulseonselect>false</pulseonselect>
+			
 		</control>
 		<control type="spincontrolex" id="9">
-			<description>Default Spin Control</description>
-			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
-			<texturenofocus border="0">-</texturenofocus>
-			<texturefocus border="10" aligny="center" align="center">button_media.png</texturefocus>
-			<height>86</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<textoffsetx>40</textoffsetx>
-			<width>600</width>
-			<pulseonselect>false</pulseonselect>
 		</control>
 		<control type="button" id="10">
 			<description>Default Category Button</description>
