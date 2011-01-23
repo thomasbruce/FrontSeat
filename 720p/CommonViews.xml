@@ -15,14 +15,32 @@
 				<usecontrolcoords>false</usecontrolcoords>
 				<control type="group">
 					<height>31</height>
-					<control type="label">
+					<control type="grouplist">
 						<width>400</width>
-						<height>26</height>
-						<font>info1</font>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textcolor>White</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<orientation>horizontal</orientation>
+						<height>31</height>
+						<itemgap>-2</itemgap>
+						<control type="image">
+							<width min="1" max="34">auto</width>
+							<height>29</height>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+							<aspectratio align="left" aligny="bottom">keep</aspectratio>
+						</control>
+						<control type="image">
+							<width min="1" max="12">auto</width>
+							<height>31</height>
+							<texture diffuse="Black.png">$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+							<aspectratio align="left" aligny="top">keep</aspectratio>
+						</control>
+						<control type="label">
+							<width>400</width>
+							<height>31</height>
+							<font>info1</font>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<textcolor>White</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
 					</control>
 					<control type="label">
 						<posy>0</posy>
@@ -309,14 +327,32 @@
 				<usecontrolcoords>false</usecontrolcoords>
 				<control type="group">
 					<height>31</height>
-					<control type="label">
+					<control type="grouplist">
 						<width>400</width>
-						<height>26</height>
-						<font>info1</font>
-						<align>left</align>
-						<aligny>top</aligny>
-						<textcolor>White</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<orientation>horizontal</orientation>
+						<height>31</height>
+						<itemgap>-2</itemgap>
+						<control type="image">
+							<width min="1" max="34">auto</width>
+							<height>29</height>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+							<aspectratio align="left" aligny="bottom">keep</aspectratio>
+						</control>
+						<control type="image">
+							<width min="1" max="12">auto</width>
+							<height>31</height>
+							<texture diffuse="Black.png">$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+							<aspectratio align="left" aligny="top">keep</aspectratio>
+						</control>
+						<control type="label">
+							<width>400</width>
+							<height>31</height>
+							<font>info1</font>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<textcolor>White</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
 					</control>
 					<control type="label">
 						<posy>0</posy>
@@ -709,7 +745,7 @@
 								<visible>!Container.Content(episodes)</visible>
 								<posy>0</posy>
 								<posx>35</posx>
-								<width>400</width>
+								<width>430</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
@@ -721,7 +757,7 @@
 								<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>35</posx>
-								<width>400</width>
+								<width>430</width>
 								<aligny>center</aligny>
 								<height>50</height>
 								<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
@@ -733,7 +769,7 @@
 								<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>35</posx>
-								<width>400</width>
+								<width>430</width>
 								<aligny>center</aligny>
 								<height>50</height>
 								<label>$INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.TVShowTitle]</label>
@@ -755,7 +791,7 @@
 							<control type="label">
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>400</width>
+								<width>430</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
@@ -775,7 +811,7 @@
 								<visible>!Container.Content(episodes)</visible>
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
@@ -787,7 +823,7 @@
 								<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<aligny>center</aligny>
 								<height>50</height>
 								<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
@@ -799,7 +835,7 @@
 								<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<aligny>center</aligny>
 								<height>50</height>
 								<label>$INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.TVShowTitle]</label>
@@ -813,7 +849,7 @@
 							<control type="label">
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
@@ -844,7 +880,7 @@
 								<visible>!Container.Content(episodes)</visible>
 								<posy>0</posy>
 								<posx>35</posx>
-								<width>400</width>
+								<width>430</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
@@ -856,7 +892,7 @@
 								<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>35</posx>
-								<width>400</width>
+								<width>430</width>
 								<aligny>center</aligny>
 								<height>50</height>
 								<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
@@ -868,7 +904,7 @@
 								<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>35</posx>
-								<width>400</width>
+								<width>430</width>
 								<aligny>center</aligny>
 								<height>50</height>
 								<label>$INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.TVShowTitle]</label>
@@ -890,7 +926,7 @@
 							<control type="label">
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>400</width>
+								<width>430</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
@@ -910,7 +946,7 @@
 								<visible>!Container.Content(episodes)</visible>
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
@@ -922,7 +958,7 @@
 								<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<aligny>center</aligny>
 								<height>50</height>
 								<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
@@ -934,10 +970,10 @@
 								<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<aligny>center</aligny>
 								<height>50</height>
-								<label>$INFO[ListItem.Season]x$INFO[ListItem.Episode] - INFO[ListItem.TVShowTitle]</label>
+								<label>$INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.TVShowTitle]</label>
 								<textcolor>White</textcolor>
 								<scroll>true</scroll>
 								<font>list1</font>
@@ -948,7 +984,7 @@
 							<control type="label">
 								<posy>0</posy>
 								<posx>20</posx>
-								<width>420</width>
+								<width>450</width>
 								<height>50</height>
 								<aligny>center</aligny>
 								<info>ListItem.Label</info>
