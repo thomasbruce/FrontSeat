@@ -59,7 +59,7 @@
 				<posx>40</posx>
 				<posy>320</posy>
 				<width>300</width>
-				<height>300</height>
+				<height>347</height>
 				<onright>400</onright>
 				<onleft>600</onleft>
 				<animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(300)">Conditional</animation>
@@ -357,5 +357,14 @@
 			<posx>580</posx>
 			<posy>60</posy>
 		</control>
+		<control type="image" id="1010">
+			<posy>636</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>40</height>
+			<texture>bottom.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		
 	</controls>
 </window>
