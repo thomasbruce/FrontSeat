@@ -35,7 +35,7 @@
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>background_trans.png</texture>
-				<fadetime>200</fadetime>
+				<fadetime>0</fadetime>
 			</control>
 			<control type="group">
 				<animation effect="slide" start="0" end="250" time="600" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
@@ -44,27 +44,39 @@
 					<orientation>vertical</orientation>
 					<itemgap>5</itemgap>
 					<posy>70</posy>
-					<control type="label">
-						<description>First title</description>
-						<label>$INFO[ListItem.TVShowTitle]: $INFO[ListItem.Title]</label>
-						<width>1100</width>
+					<control type="group">
 						<height>40</height>
-						<align>left</align>
-						<aligny>top</aligny>
-						<font>info1</font>
-						<textcolor>White</textcolor>
-						<visible>Container.Content(episodes)</visible>
-					</control>
-					<control type="label">
-						<description>First title</description>
-						<label>$INFO[ListItem.Title]</label>
-						<width>1100</width>
-						<height>40</height>
-						<align>left</align>
-						<aligny>top</aligny>
-						<font>info1</font>
-						<textcolor>White</textcolor>
-						<visible>!Container.Content(episodes)</visible>
+						<control type="label">
+							<description>First title</description>
+							<label>$INFO[ListItem.TVShowTitle]: $INFO[ListItem.Title]</label>
+							<width>580</width>
+							<height>40</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>info1</font>
+							<textcolor>White</textcolor>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+						<control type="label">
+							<description>First title</description>
+							<label>$INFO[ListItem.Title]</label>
+							<width>580</width>
+							<height>40</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>info1</font>
+							<textcolor>White</textcolor>
+							<visible>!Container.Content(episodes)</visible>
+						</control>
+						<control type="image">
+							<posy>0</posy>
+							<posx>600</posx>
+							<visible>!IsEmpty(ListItem.Rating)</visible>
+							<width>88</width>
+							<height>40</height>
+							<info>ListItem.StarRating</info>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+						</control>
 					</control>
 					<control type="image">
 						<posy>0</posy>
@@ -291,6 +303,15 @@
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>WhiteTrans</colordiffuse>
 					</control>
+					<control type="image">
+						<posy>0</posy>
+						<posx>0</posx>
+						<width>700</width>
+						<height>3</height>
+						<texture>white.png</texture>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>00FFFFFF</colordiffuse>
+					</control>
 					<control type="group" id="9001">
 						<height>250</height>
 						<onleft>9000</onleft>
@@ -361,7 +382,17 @@
 							</focusedlayout>
 						</control>
 					</control>
+					<control type="image">
+						<posy>0</posy>
+						<posx>0</posx>
+						<width>700</width>
+						<height>12</height>
+						<texture>white.png</texture>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>00FFFFFF</colordiffuse>
+					</control>
 					<control type="grouplist">
+						<height>333</height>
 						<orientation>horizontal</orientation>
 						<itemgap>25</itemgap>
 						<visible>!Container.Content(episodes)</visible>
