@@ -135,7 +135,7 @@
 						<height>25</height>
 						<visible>Container.Content(movies)</visible>
 						<control type="label">
-							<label>[COLOR=WhiteTrans]Released in:[/COLOR]</label>
+							<label>[COLOR=WhiteTrans]Release in:[/COLOR]</label>
 							<font>info2</font>
 							<align>right</align>
 							<width>110</width>
