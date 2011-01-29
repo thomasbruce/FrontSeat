@@ -1,9 +1,39 @@
 <?xml version="1.0"?>
 <window id="56">
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">5</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Background</include>
-		<!-- None for now -->
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>170</posx>
+			<posy>100</posy>
+			<width>900</width>
+			<height>563</height>
+			<itemgap>4</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<orientation>vertical</orientation>
+			<control type="radiobutton" id="2018">
+				<label>Hide Plex Logo in Home</label>
+				<selected>Skin.HasSetting(HidePlexLogo)</selected>
+				<onclick>Skin.ToggleSetting(HidePlexLogo)</onclick>
+			</control>
+			<control type="radiobutton" id="2019">
+				<label>Show HD Icon</label>
+				<onclick>Skin.ToggleSetting(Flags)</onclick>
+				<selected>Skin.HasSetting(Flags)</selected>
+			</control>
+			<control type="radiobutton" id="2020">
+				<label>Use Posters for TV Shows instead of Fanart</label>
+				<onclick>Skin.ToggleSetting(PosterTVShows)</onclick>
+				<selected>Skin.HasSetting(PosterTVShows)</selected>
+			</control>
+			<control type="radiobutton" id="2021">
+				<label>Hide Unwatched flags</label>
+				<onclick>Skin.ToggleSetting(NoWatchedFlags)</onclick>
+				<selected>Skin.HasSetting(NoWatchedFlags)</selected>
+			</control>
+		</control>
 	</controls>
 </window>

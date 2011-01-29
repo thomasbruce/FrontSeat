@@ -14,27 +14,45 @@
 				<orientation>vertical</orientation>
 				<usecontrolcoords>false</usecontrolcoords>
 				<control type="group">
-					<height>31</height>
+					<height>34</height>
 					<control type="grouplist">
+						<visible>Skin.HasSetting(Flags)</visible>
 						<width>400</width>
 						<orientation>horizontal</orientation>
-						<height>31</height>
+						<height>34</height>
 						<itemgap>-2</itemgap>
 						<control type="image">
 							<width min="1" max="34">auto</width>
-							<height>29</height>
+							<height>30</height>
 							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 							<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						</control>
 						<control type="image">
 							<width min="1" max="12">auto</width>
-							<height>31</height>
-							<texture diffuse="Black.png">$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+							<height>34</height>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
+							<colordiffuse>00ffffff</colordiffuse>
 							<aspectratio align="left" aligny="top">keep</aspectratio>
 						</control>
 						<control type="label">
 							<width>400</width>
-							<height>31</height>
+							<height>34</height>
+							<font>info1</font>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<textcolor>White</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					<control type="grouplist">
+						<visible>!Skin.HasSetting(Flags)</visible>
+						<width>400</width>
+						<orientation>horizontal</orientation>
+						<height>34</height>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<width>400</width>
+							<height>36</height>
 							<font>info1</font>
 							<align>left</align>
 							<aligny>bottom</aligny>
@@ -58,9 +76,9 @@
 						<posx>410</posx>
 						<visible>!IsEmpty(ListItem.Rating) + !Skin.HasSetting(AlternateRating)</visible>
 						<width>88</width>
-						<height>31</height>
+						<height>34</height>
 						<info>ListItem.StarRating</info>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
 					</control>
 				</control>
 				<control type="image">
@@ -179,7 +197,7 @@
 				<orientation>vertical</orientation>
 				<usecontrolcoords>false</usecontrolcoords>
 				<control type="group">
-					<height>31</height>
+					<height>34</height>
 					<control type="label">
 						<width>400</width>
 						<height>26</height>
@@ -205,9 +223,9 @@
 						<posx>410</posx>
 						<visible>!IsEmpty(ListItem.Rating) + !Skin.HasSetting(AlternateRating)</visible>
 						<width>88</width>
-						<height>31</height>
+						<height>34</height>
 						<info>ListItem.StarRating</info>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
 					</control>
 				</control>
 				<control type="image">
@@ -240,9 +258,9 @@
 				<control type="group">
 					<height>75</height>
 					<control type="label">
-						<posx>83</posx>
+						<posx>94</posx>
 						<posy>0</posy>
-						<width>83</width>
+						<width>94</width>
 						<height>25</height>
 						<font>info2</font>
 						<align>right</align>
@@ -251,9 +269,9 @@
 						<label>Genre:</label>
 					</control>
 					<control type="label">
-						<posx>83</posx>
+						<posx>94</posx>
 						<posy>25</posy>
-						<width>83</width>
+						<width>94</width>
 						<height>25</height>
 						<font>info2</font>
 						<align>right</align>
@@ -262,9 +280,9 @@
 						<label>First aired:</label>
 					</control>
 					<control type="label">
-						<posx>83</posx>
+						<posx>94</posx>
 						<posy>50</posy>
-						<width>83</width>
+						<width>94</width>
 						<height>25</height>
 						<font>info2</font>
 						<align>right</align>
@@ -273,7 +291,7 @@
 						<label>Duration:</label>
 					</control>
 					<control type="label">
-						<posx>90</posx>
+						<posx>100</posx>
 						<posy>0</posy>
 						<width>400</width>
 						<height>25</height>
@@ -284,7 +302,7 @@
 						<info>ListItem.FirstGenre</info>
 					</control>
 					<control type="label">
-						<posx>90</posx>
+						<posx>100</posx>
 						<posy>25</posy>
 						<width>400</width>
 						<height>25</height>
@@ -295,7 +313,7 @@
 						<info>ListItem.Year</info>
 					</control>
 					<control type="label">
-						<posx>90</posx>
+						<posx>100</posx>
 						<posy>50</posy>
 						<width>400</width>
 						<height>25</height>
@@ -326,11 +344,12 @@
 				<orientation>vertical</orientation>
 				<usecontrolcoords>false</usecontrolcoords>
 				<control type="group">
-					<height>31</height>
+					<height>34</height>
 					<control type="grouplist">
+						<visible>Skin.HasSetting(Flags)</visible>
 						<width>400</width>
 						<orientation>horizontal</orientation>
-						<height>31</height>
+						<height>34</height>
 						<itemgap>-2</itemgap>
 						<control type="image">
 							<width min="1" max="34">auto</width>
@@ -340,13 +359,30 @@
 						</control>
 						<control type="image">
 							<width min="1" max="12">auto</width>
-							<height>31</height>
+							<height>34</height>
 							<texture diffuse="Black.png">$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 							<aspectratio align="left" aligny="top">keep</aspectratio>
+							<colordiffuse>00ffffff</colordiffuse>
 						</control>
 						<control type="label">
 							<width>400</width>
-							<height>31</height>
+							<height>34</height>
+							<font>info1</font>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<textcolor>White</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					<control type="grouplist">
+						<visible>!Skin.HasSetting(Flags)</visible>
+						<width>400</width>
+						<orientation>horizontal</orientation>
+						<height>34</height>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<width>400</width>
+							<height>34</height>
 							<font>info1</font>
 							<align>left</align>
 							<aligny>bottom</aligny>
@@ -370,9 +406,9 @@
 						<posx>410</posx>
 						<visible>!IsEmpty(ListItem.Rating) + !Skin.HasSetting(AlternateRating)</visible>
 						<width>88</width>
-						<height>31</height>
+						<height>34</height>
 						<info>ListItem.StarRating</info>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
 					</control>
 				</control>
 				<control type="image">
@@ -491,7 +527,7 @@
 				<orientation>vertical</orientation>
 				<usecontrolcoords>false</usecontrolcoords>
 				<control type="group">
-					<height>31</height>
+					<height>34</height>
 					<control type="label">
 						<width>400</width>
 						<height>26</height>
@@ -517,9 +553,9 @@
 						<posx>410</posx>
 						<visible>!IsEmpty(ListItem.Rating) + !Skin.HasSetting(AlternateRating)</visible>
 						<width>88</width>
-						<height>31</height>
+						<height>34</height>
 						<info>ListItem.StarRating</info>
-						<aspectratio aligny="center" align="left">keep</aspectratio>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
 					</control>
 				</control>
 				<control type="image">
@@ -564,7 +600,7 @@
 				<control type="group">
 					<posx>10</posx>
 					<posy>100</posy>
-					<visible>!Container.Content(tvshows)</visible>
+					<visible>!Container.Content(tvshows) | [Container.Content(tvshows) + Skin.HasSetting(PosterTVShows)]</visible>
 					<control type="image">
 						<visible>!Container.OnNext + !Container.OnPrevious</visible>
 						<animation effect="fade" end="100" start="0" time="600" delay="0" reversible="false">VisibleChange</animation>
@@ -644,7 +680,7 @@
 				<control type="group">
 					<posx>10</posx>
 					<posy>80</posy>
-					<visible>Container.Content(tvshows)</visible>
+					<visible>Container.Content(tvshows) + !Skin.HasSetting(PosterTVShows)</visible>
 					<control type="image">
 						<visible>!Container.OnNext + !Container.OnPrevious</visible>
 						<animation effect="fade" end="100" start="0" time="600" delay="0" reversible="false">VisibleChange</animation>
